@@ -1,7 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "PowerShell(npx --yes playwright@1.48.0 install chromium --with-deps 2>&1)"
-    ]
-  }
-}
