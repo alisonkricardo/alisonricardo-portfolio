@@ -10,7 +10,7 @@ const scrollTo = (id) => (e) => {
 
 const badges = [
   { label: 'CS & Maths · Open University', color: 'bg-lavender-light' },
-  { label: 'Final Year · Grad 2026', color: 'bg-sun-light' },
+  { label: 'Final Year · Grad 2027', color: 'bg-sun-light' },
   { label: 'Aiming for Quant', color: 'bg-mint-light' },
 ]
 
