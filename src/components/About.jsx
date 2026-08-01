@@ -5,8 +5,7 @@ import { PixelHeart } from './PixelSprites'
 const facts = [
   { label: 'Based in', value: 'West Sussex, UK' },
   { label: 'Studying', value: 'BSc CS & Maths, Open University' },
-  { label: 'Graduating', value: '2026' },
-  { label: 'Also learning', value: 'Mandarin Chinese' },
+  { label: 'Graduating', value: 'Mid 2027' },
 ]
 
 export default function About() {
@@ -36,24 +35,18 @@ export default function About() {
           <p>
             I'm in my final year of a Computer Science &amp; Mathematics degree at the Open
             University, wrapping up modules in Software Engineering and Computational Applied
-            Mathematics. Before that, I completed my first year of Computer Science at the
-            University of Westminster — so I've seen both the campus and remote sides of a CS
-            degree.
+            Mathematics.
           </p>
           <p>
-            Right now I'm focused on landing a graduate software engineering role where I can
+            Currently, I'm focused on landing a graduate software engineering role where I can
             build production systems and keep sharpening my fundamentals. Longer term, I'm
             drawn to quantitative finance — I like the mix of rigorous mathematics, statistics,
-            and fast, correct code, which is why I've been building things like a quantum
-            random number generator validated across 600 measurement shots, and a C++ limit
-            order book simulator with a basic market-making strategy on top.
+            and fast, correct code.
           </p>
           <p>
-            Before doubling down on software, I spent time doing hands-on web development and
-            brand/creative work — redesigning a company website end-to-end and growing traffic
-            by 30%, and building and maintaining 15+ pages for another. It taught me to care
-            about the details recruiters don't always ask about: performance, content, and
-            actually shipping things people use.
+            Outside of work and study, I enjoy playing video games, reading, watching films
+            and tinkering with electronics. Alongside training for a half marathon, I also like to
+            keep active with yoga and weightlifting.
           </p>
         </div>
       </div>

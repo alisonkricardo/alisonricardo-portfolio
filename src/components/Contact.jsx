@@ -33,7 +33,7 @@ export default function Contact() {
         eyebrow="SAVE FILE"
         title="Get In"
         highlight="Touch"
-        subtitle="Open to graduate software engineering roles — remote or UK-based. Always happy to talk quant, quantum, or code."
+        subtitle="Open to graduate software engineering roles — remote or UK-based. Feel free to reach out via email or LinkedIn!"
         color="sun"
       />
 
