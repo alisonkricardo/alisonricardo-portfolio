@@ -4,43 +4,79 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Core dark palette — charcoal/navy background, never pure black
-        base: {
-          DEFAULT: '#0D0D1A',
-          light: '#161629',
-          card: '#14141F',
+        // Warm cream base — never stark white, keeps the nostalgic "old browser game" feel
+        cream: {
+          DEFAULT: '#FFF8EF',
+          card: '#FFFFFF',
         },
-        gold: {
-          DEFAULT: '#B8962E',
-          light: '#D4B65A',
+        ink: {
+          DEFAULT: '#3A2E4D',
+          soft: '#6E5F82',
+        },
+        bubblegum: {
+          DEFAULT: '#FF8FAB',
+          dark: '#E8628C',
+          light: '#FFD9E4',
         },
         lavender: {
-          DEFAULT: '#AFA9EC',
-          light: '#C9C5F5',
+          DEFAULT: '#B3A0F7',
+          dark: '#8C74E0',
+          light: '#E6DEFF',
+        },
+        mint: {
+          DEFAULT: '#6FE0C2',
+          dark: '#3FBE9C',
+          light: '#D2F7EC',
+        },
+        sun: {
+          DEFAULT: '#FFD25E',
+          dark: '#F0AE1F',
+          light: '#FFF1C7',
+        },
+        sky: {
+          DEFAULT: '#7FCFFF',
+          dark: '#4CA9EA',
+          light: '#DBF2FF',
         },
       },
       fontFamily: {
-        display: ['"Space Grotesk"', 'sans-serif'],
-        body: ['Inter', 'sans-serif'],
+        display: ['Fredoka', 'sans-serif'],
+        body: ['Quicksand', 'sans-serif'],
+        pixel: ['"Press Start 2P"', 'monospace'],
+      },
+      boxShadow: {
+        chunky: '0 4px 0 0 var(--tw-shadow-color)',
+        'chunky-lg': '0 6px 0 0 var(--tw-shadow-color)',
+        'chunky-sm': '0 2px 0 0 var(--tw-shadow-color)',
+        panel: '6px 6px 0 0 var(--tw-shadow-color)',
+      },
+      borderRadius: {
+        blob: '42% 58% 63% 37% / 41% 45% 55% 59%',
       },
       animation: {
-        'fade-in': 'fadeIn 0.8s ease-out forwards',
-        'drift': 'drift 60s linear infinite',
+        float: 'float 5s ease-in-out infinite',
+        'float-slow': 'float 7s ease-in-out infinite',
+        'float-slower': 'float 9s ease-in-out infinite',
+        wiggle: 'wiggle 2.4s ease-in-out infinite',
         'bounce-slow': 'bounceSlow 2.4s ease-in-out infinite',
+        twinkle: 'twinkle 2.2s ease-in-out infinite',
       },
       keyframes: {
-        fadeIn: {
-          '0%': { opacity: 0, transform: 'translateY(16px)' },
-          '100%': { opacity: 1, transform: 'translateY(0)' },
+        float: {
+          '0%, 100%': { transform: 'translateY(0) translateX(0) rotate(0deg)' },
+          '50%': { transform: 'translateY(-16px) translateX(6px) rotate(4deg)' },
         },
-        drift: {
-          '0%': { transform: 'translateY(0) translateX(0)' },
-          '50%': { transform: 'translateY(-20px) translateX(10px)' },
-          '100%': { transform: 'translateY(0) translateX(0)' },
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-4deg)' },
+          '50%': { transform: 'rotate(4deg)' },
         },
         bounceSlow: {
           '0%, 100%': { transform: 'translateY(0)', opacity: 0.6 },
           '50%': { transform: 'translateY(8px)', opacity: 1 },
+        },
+        twinkle: {
+          '0%, 100%': { opacity: 0.4, transform: 'scale(0.9)' },
+          '50%': { opacity: 1, transform: 'scale(1.15)' },
         },
       },
     },

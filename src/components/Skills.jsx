@@ -1,13 +1,11 @@
 import { motion } from 'framer-motion'
 import AnimatedSection from './AnimatedSection'
+import SectionHeading from './SectionHeading'
 import skills from '../data/skills'
 
-// Parent controls the stagger timing; each pill is a child that fades/rises in turn.
 const containerVariants = {
   hidden: {},
-  visible: {
-    transition: { staggerChildren: 0.05 },
-  },
+  visible: { transition: { staggerChildren: 0.05 } },
 }
 
 const pillVariants = {
@@ -15,20 +13,28 @@ const pillVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
 }
 
-function SkillCategory({ category, icon: Icon, items }) {
+const palette = [
+  { icon: 'bg-bubblegum text-white', pill: 'border-bubblegum/40 bg-bubblegum-light text-bubblegum-dark' },
+  { icon: 'bg-lavender text-white', pill: 'border-lavender/40 bg-lavender-light text-ink' },
+  { icon: 'bg-mint text-white', pill: 'border-mint/40 bg-mint-light text-ink' },
+  { icon: 'bg-sun text-ink', pill: 'border-sun/50 bg-sun-light text-ink' },
+  { icon: 'bg-sky text-white', pill: 'border-sky/40 bg-sky-light text-ink' },
+]
+
+function SkillCategory({ category, icon: Icon, items, colors }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.6 }}
-      className="rounded-2xl border border-white/10 bg-base-card p-6 transition-colors hover:border-lavender/30"
+      className="panel panel-hover border-ink p-6 shadow-ink"
     >
       <div className="flex items-center gap-3">
-        <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-gold/10 text-gold">
-          <Icon size={18} />
+        <span className={`flex h-10 w-10 items-center justify-center rounded-xl border-[3px] border-ink shadow-chunky-sm shadow-ink ${colors.icon}`}>
+          <Icon size={16} />
         </span>
-        <h3 className="font-display text-lg font-semibold text-white">{category}</h3>
+        <h3 className="font-display text-lg font-bold text-ink">{category}</h3>
       </div>
 
       <motion.div
@@ -42,7 +48,7 @@ function SkillCategory({ category, icon: Icon, items }) {
           <motion.span
             key={item}
             variants={pillVariants}
-            className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-sm text-white/70 transition-colors hover:border-lavender/40 hover:text-lavender-light"
+            className={`rounded-full border-2 px-3 py-1.5 text-sm font-semibold ${colors.pill}`}
           >
             {item}
           </motion.span>
@@ -55,19 +61,17 @@ function SkillCategory({ category, icon: Icon, items }) {
 export default function Skills() {
   return (
     <AnimatedSection id="skills" className="mx-auto max-w-6xl">
-      <div className="glow-lavender relative text-center">
-        <h2 className="font-display text-3xl font-semibold sm:text-4xl">
-          Skills &amp; <span className="text-gradient">Tools</span>
-        </h2>
-        <p className="mx-auto mt-3 max-w-xl text-white/60">
-          A toolkit that spans game development, technical art, and the software/ML side of
-          things.
-        </p>
-      </div>
+      <SectionHeading
+        eyebrow="INVENTORY"
+        title="Skills &"
+        highlight="Tools"
+        subtitle="A toolkit spanning software fundamentals, quantitative computing, and the maths underneath it all."
+        color="sky"
+      />
 
       <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {skills.map((group) => (
-          <SkillCategory key={group.category} {...group} />
+        {skills.map((group, i) => (
+          <SkillCategory key={group.category} {...group} colors={palette[i % palette.length]} />
         ))}
       </div>
     </AnimatedSection>

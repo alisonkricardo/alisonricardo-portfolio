@@ -8,50 +8,48 @@
   }
 
   body {
-    @apply bg-base text-white font-body antialiased;
+    @apply bg-cream text-ink font-body antialiased;
+    background-image:
+      radial-gradient(circle at 8px 8px, rgba(179, 160, 247, 0.16) 2px, transparent 0);
+    background-size: 28px 28px;
   }
 
   h1, h2, h3, h4 {
     @apply font-display;
   }
 
-  /* thin, muted scrollbar to match the dark theme */
   ::-webkit-scrollbar {
-    width: 10px;
+    width: 12px;
   }
   ::-webkit-scrollbar-track {
-    background: #0D0D1A;
+    background: #FFF8EF;
   }
   ::-webkit-scrollbar-thumb {
-    background: #2a2a40;
+    background: #B3A0F7;
+    border: 3px solid #FFF8EF;
     border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #8C74E0;
   }
 }
 
 @layer utilities {
-  /* radial glow used behind section headings */
-  .glow-gold::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at center, rgba(184, 150, 46, 0.18), transparent 70%);
-    pointer-events: none;
-    z-index: -1;
+  /* Chunky "pressable" button — flat colour, thick bottom shadow, presses down on click */
+  .btn-chunky {
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl border-[3px] font-display font-semibold transition-all duration-150 ease-out active:translate-y-1;
   }
 
-  .glow-lavender::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at center, rgba(175, 169, 236, 0.16), transparent 70%);
-    pointer-events: none;
-    z-index: -1;
+  /* Panel / card with the offset "game window" shadow look */
+  .panel {
+    @apply rounded-3xl border-[3px] bg-cream-card shadow-panel transition-transform duration-200;
   }
 
-  .text-gradient {
-    background: linear-gradient(90deg, #B8962E, #AFA9EC);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+  .panel-hover:hover {
+    transform: translate(-2px, -2px);
+  }
+
+  .text-outline {
+    -webkit-text-stroke: 1px rgba(58, 46, 77, 0.15);
   }
 }

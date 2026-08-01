@@ -1,33 +1,20 @@
-// Add new projects here as you build them — each object maps directly to a ProjectCard.
-// `link` is a placeholder for now; swap in real itch.io / GitHub / demo URLs as they go live.
+// Each object maps directly to a ProjectCard.
 const projects = [
   {
-    title: 'SpaceMatch',
-    description:
-      'A competitive space-themed memory match tile game — race an opponent to clear the board while power-ups shuffle the odds in your favour.',
-    tech: ['Godot 4', 'GDScript'],
-    link: '#',
-  },
-  {
-    title: 'Custom Physics Platformer',
-    description:
-      '2D platformer with gravity, collision detection, and character movement built entirely from scratch — no built-in physics engine used.',
-    tech: ['Godot 4', 'GDScript'],
-    link: '#',
-  },
-  {
     title: 'Quantum Computing Fundamentals',
+    status: 'completed',
     description:
-      'A Jupyter notebook walking through superposition, entanglement, Bell states, and the Deutsch-Jozsa algorithm from first principles.',
-    tech: ['Python', 'Qiskit'],
-    link: '#',
+      'A Jupyter notebook engineering 4 core quantum algorithms — superposition, entanglement, Bell states, and Deutsch–Jozsa — derived from mathematical first principles. Includes a quantum random number generator statistically validated across 600 measurement shots.',
+    tech: ['Python', 'Qiskit', 'Qiskit Aer', 'Matplotlib', 'Jupyter'],
+    link: 'https://github.com/alisonkricardo/quantum-computing-fundamentals',
   },
   {
-    title: 'Shader Studies',
+    title: 'Limit Order Book Simulator',
+    status: 'in-progress',
     description:
-      'Ongoing collection of GLSL experiments and visual effects — noise fields, raymarching, and stylised lighting explorations.',
-    tech: ['GLSL', 'Shadertoy'],
-    link: '#',
+      'A limit order book matching engine implementing price-time priority order matching with partial fill handling across multiple resting orders, plus a basic market-making strategy using inventory-risk-based quote skewing.',
+    tech: ['C++'],
+    link: 'https://github.com/alisonkricardo',
   },
 ]
 

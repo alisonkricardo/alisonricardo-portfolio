@@ -1,44 +1,37 @@
 import {
-  FaGamepad,
-  FaPaintBrush,
-  FaCubes,
   FaCode,
-  FaAtom,
+  FaSitemap,
+  FaChartLine,
+  FaSquareRootAlt,
   FaToolbox,
 } from 'react-icons/fa'
 
 // Each category gets an icon + a flat list of skill labels rendered as pills.
-// Add/remove entries here — Skills.jsx just maps over this array.
 const skills = [
-  {
-    category: 'Game Development',
-    icon: FaGamepad,
-    items: ['Godot 4', 'GDScript', 'Unity', 'Unreal Engine 5', 'itch.io'],
-  },
-  {
-    category: 'Graphics & Shaders',
-    icon: FaPaintBrush,
-    items: ['GLSL', 'HLSL', 'Shadertoy', 'PBR', 'Real-time Rendering'],
-  },
-  {
-    category: '3D & Technical Art',
-    icon: FaCubes,
-    items: ['Blender', 'Houdini', 'Substance 3D Painter', 'ZBrush'],
-  },
   {
     category: 'Languages',
     icon: FaCode,
-    items: ['Python', 'JavaScript', 'HTML/CSS', 'Java', 'C++'],
+    items: ['Python', 'C++', 'JavaScript', 'HTML/CSS', 'Java'],
   },
   {
-    category: 'ML / Quantum',
-    icon: FaAtom,
-    items: ['PyTorch', 'Hugging Face', 'Qiskit', 'Scikit-learn'],
+    category: 'Data Structures & Algorithms',
+    icon: FaSitemap,
+    items: ['Arrays', 'Trees', 'Graphs', 'Hash Maps', 'Dynamic Programming', 'Complexity Analysis'],
+  },
+  {
+    category: 'Quantitative & Scientific Computing',
+    icon: FaChartLine,
+    items: ['Qiskit', 'Jupyter', 'Matplotlib', 'NumPy', 'pandas', 'Statistical Verification'],
+  },
+  {
+    category: 'Mathematics',
+    icon: FaSquareRootAlt,
+    items: ['Linear Algebra', 'Probability & Statistics', "Bayes' Theorem", 'Combinatorics'],
   },
   {
     category: 'Tools',
     icon: FaToolbox,
-    items: ['Git', 'VS Code', 'Jupyter', 'Figma'],
+    items: ['Git / GitHub', 'VS Code', 'Jupyter', 'Streamlit', 'Figma'],
   },
 ]
 
